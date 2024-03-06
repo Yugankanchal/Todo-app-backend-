@@ -1,5 +1,5 @@
-const exp = require('constants');
-const { urlencoded } = require('express');
+// const exp = require('constants');
+// const { urlencoded } = require('express');
 const express = require('express');
 const db = require('./config/mongoose')
 const port = 800;
@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'Views'));
 
 app.use(express.static('assets'))
-app.use(urlencoded());
+// app.use(urlencoded());
 app.get('/', (req, res) => {
     todoList.find({}, (err, Todo) => {
         if (err) {
