@@ -1,0 +1,153 @@
+.centre {
+    text-align: center;
+    font-family: system-ui;
+}
+
+.textColor {
+    color: grey;
+}
+
+body {
+    margin: 0;
+    background-color: gray;
+}
+
+#cointainer {
+    width: 60%;
+    height: auto;
+    background-color: white;
+    margin-right: 50%;
+    margin-left: 19%;
+    min-width: 741px;
+}
+
+input {
+    border: hidden;
+    /* font-size: 1.2rem; */
+}
+
+input:focus {
+    outline: none;
+}
+
+select {
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #00000059;
+}
+
+#dueDate {
+    font-size: 1rem;
+    width: 30%;
+    color: #00000059;
+}
+
+select:focus {
+    outline: none;
+}
+
+.data {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.data label {
+    margin-left: 6px;
+}
+
+#date {
+    border-left: 2px solid lightgray;
+    width: 49%;
+    padding-left: 5px;
+    min-width: 352px;
+}
+
+.formData {
+    border-top: 1px solid gray;
+    border-collapse: collapse;
+    margin-left: none;
+    padding-bottom: 20px;
+
+}
+
+button[type="submit"] {
+    font-size: 1.4rem;
+    padding: 1rem;
+    display: flex;
+    color: white;
+    margin: 10px;
+    border: none;
+}
+
+button[type="submit"] i {
+    margin-right: 0.7rem;
+    margin-left: -0.5rem;
+}
+
+
+#buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#addTask {
+    background-color: #000000c7;
+}
+
+#deleteTask {
+    background-color: red;
+}
+
+.list li {
+    width: 85%;
+    font-size: 1.4rem;
+    border-top: 1px solid rgb(183, 183, 183);
+    padding: 10px;
+    display: flex;
+    color: #000000ad;
+
+}
+
+.displaydate {
+    color: #bcbaba;
+    margin-left: -.5rem;
+}
+
+.todoCategory {
+    display: inline-block;
+    margin-left: auto;
+    width: 6rem;
+    font-size: 1.4rem;
+    color: white;
+    height: 1.7rem;
+    text-align: center;
+    padding: 10px;
+    background-color: purple;
+}
+
+.list li input {
+    width: 1.21rem;
+    margin-top: 1.5rem;
+    position: relative;
+    top: -1rem;
+    box-shadow: 0 0 7px 1px grey;
+    height: 1.21rem;
+    left: -10px;
+}
+
+.Decription {
+    color: #593d3db8;
+}
+
+.list li i {
+    margin: 10px;
+    font-size: 1.3rem;
+}
+
+.deadline {
+    font-size: 1.2rem;
+}

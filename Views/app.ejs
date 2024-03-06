@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="/CSS/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div id="cointainer">
+        <h1 class="centre textColor">Todo App</h1>
+        <form action="/add-task" method="post">
+            <div class="data">
+                <div style="width: 100%;" class="formData">
+                    <label for="description" class="textColor">Description</label><br>
+                    <input type="text" id="description" placeholder="What do you need to do" name="description">
+                </div>
+                <div style="width: 50%;" class="formData">
+                    <label for="category" class="textColor">Categories</label><br>
+                    <select name="category" id="category" placeholder="category">
+                        <option value="" disabled selected> Choose your Category</option>
+                        <option value="personal">personal</option>
+                        <option value="work">work</option>
+                        <option value="cleaning">cleaning</option>
+                        <option value="School">School</option>
+                        <option value="others">others</option>
+                    </select>
+                </div>
+                <div style="width: 49%;" class="formData" id="date">
+                    <label for="dueDate" class="textColor">Due-Date</label><br>
+                    <input type="date" id="dueDate" name="dueDate">
+                </div>
+                <div class="topborder" id="buttons">
+                    <button type="submit" id="addTask" name="type" value="Update"><i class="fa-solid fa-plus"></i>Add
+                        Task</button>
+                    <button type="submit" id="deleteTask" name="type" value="Delete"><i
+                            class="fa-solid fa-trash-can"></i> Delete
+                        Task</button>
+                </div>
+            </div>
+
+            <div class="list">
+                <ul type="none">
+                    <% for(var i of TodoList) {%>
+                        <li><input type="checkbox" name="TodoDone" value="<%= i._id %>">
+                            <div style="display: inline-block;">
+                                <span class="Decription">
+                                    <%= i.description%>
+                                </span>
+                                <div class="displaydate"><i class="fa-solid fa-calendar-days"></i>
+                                    <span class="deadline">
+                                        <%= i.dueDate%>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="todoCategory">
+                                <%= i.category%>
+                            </div>
+                        </li>
+                        <%} %>
+                </ul>
+            </div>
+
+        </form>
+    </div>
+    <script src="/jS/app.js"></script>
+</body>
+
+</html>
