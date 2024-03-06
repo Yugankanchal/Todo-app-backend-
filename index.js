@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'Views'));
 
 app.use(express.static('assets'))
-// app.use(urlencoded());
+app.use(urlencoded());
 app.get('/', (req, res) => {
     todoList.find({}, (err, Todo) => {
         if (err) {
